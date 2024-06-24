@@ -33,7 +33,7 @@ namespace Bank
         {
             await Task.Run(() =>
             {
-                client.AddAccount(bankAccount);
+            client.AddAccount(bankAccount);
                 AllBankAccounts.Add(bankAccount);
             });
         }
@@ -42,26 +42,26 @@ namespace Bank
         {
             await Task.Run(() => AllBankAccounts.Add(bankAccount));
         }
-     
+
         public async Task GetAllClients()
         {
             await Task.Run(() =>
+        {
+            foreach (var client in AllClients)
             {
-                foreach (var client in AllClients)
-                {
-                    Console.WriteLine(client.ToString());
-                }
+                Console.WriteLine(client.ToString());
+            }
             });
         }
       
         public async Task GetAllBankAccounts()
         {
             await Task.Run(() =>
+        {
+            foreach (var account in AllBankAccounts)
             {
-                foreach (var account in AllBankAccounts)
-                {
-                    Console.WriteLine(account.ToString());
-                }
+                Console.WriteLine(account.ToString());
+            }
             });
         }
     }
