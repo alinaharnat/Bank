@@ -87,10 +87,7 @@ namespace Bank
         {
             return $"{id}";
         }
-        public void Add()
-        {
-
-        }
+       
     }
     public enum TypeOfOperation
     {

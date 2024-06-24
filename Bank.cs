@@ -57,7 +57,7 @@ namespace Bank
         public async Task GetAllBankAccounts()
         {
             await Task.Run(() =>
-        {
+            {
             foreach (var account in AllBankAccounts)
             {
                 Console.WriteLine(account.ToString());

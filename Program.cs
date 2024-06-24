@@ -9,14 +9,11 @@ namespace Bank
        public  static async Task Main(string[] args)
         {
            Bank bank = new Bank();
-            var client1 = new Client("Mia", "Davis");
             var acc1 = new BankAccount(101123,new Money(1000,0),5);
             var acc2 = new BankAccount(101124, new Money(500, 90), 5);
-            var acc3 = new BankAccount(101125, new Money(20000, 10), 5);
-            client1.AddAccount(acc1);
-            client1.AddAccount(acc2);
-            client1.AddAccount(acc3);
-            await Client.GetClientAccounts(client1);
+            await bank.AddBankAccount(acc1);
+            await bank.AddBankAccount(acc2);
+            await bank.GetAllBankAccounts();
         }
         //Client
 
